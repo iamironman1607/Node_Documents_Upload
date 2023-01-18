@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- <h1>Hi !</h1> -->
+    <form action="/uploadfiles" method="post" enctype="multipart/form-data">
+        
+        <div> <h3>Upload File using Node</h3></div>
+        <div>
+
+            <label for="file1">Upload File 1:</label>
+            <input type="file" id="file1" name="file1" required>
+        </div>
+        <div>
+            <label for="file2">Upload Files:</label>
+            <input type="file" id="file2" name="file2" multiple required>
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit">
+        </div>
+
+    </form>
+
+    <!-- <script>
+
+document.querySelector('form').addEventListener('submit',async (event)=>{
+
+        event.preventDefault();
+        try{
+                  await fetch('/uploadfiles',{
+                    method: 'POST',
+                    body:{file1, file2},
+                    // headers:{'Content-type':'multipart/form-data'}
+                  })
+                  .then(res=>res.json())
+                  .then(data =>console.log(data))
+                  .catch(err =>console.log(err));
+        }
+        catch(err){
+
+            console.log('Error While Uploading the Documents', err.message);
+        }
+    })
+    </script> -->
+</body>
+</html>
